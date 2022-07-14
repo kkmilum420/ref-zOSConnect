@@ -1,0 +1,33 @@
+---
+Manifest-Version: 1.0
+name: "ref-db2-vehicleorder-search-v1"
+provider: "restclient-1.0"
+factoryPid: "rest"
+requestSchema:
+  value: "file:///schemas/ref-db2-vehicleorder-search-v1Request.json"
+  type: "JSONSchema"
+responseSchema:
+  value: "file:///schemas/ref-db2-vehicleorder-search-v1Response.json"
+  type: "JSONSchema"
+providerProperties:
+- propertyName: "db2ServiceName"
+  value: "ref_vehicleOrder"
+  type: "STRING"
+- propertyName: "db2ServiceVersion"
+  value: "1"
+  type: "STRING"
+- propertyName: "collectionId"
+  value: "CV542D1"
+  type: "STRING"
+- propertyName: "verb"
+  value: "POST"
+  type: "STRING"
+- propertyName: "uri"
+  value: "/services/CV542D1/ref_vehicleOrder/1"
+  type: "STRING"
+- propertyName: "connectionRef"
+  value: "D21H"
+  type: "STRING"
+providerObjects: []
+version: "1.0.0"
+description: "DB2 Rest Service integration for Search Functionality"

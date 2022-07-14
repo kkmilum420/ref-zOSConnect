@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="zosconnect" jsonWrapped="true" jsonWrapperName="ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/POST" version="8.0.5.0" xmlns:map="http://www.ibm.com/zosConnect/2.0/mapping/POST">
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST">  
+  <xsd:element name="ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1" type="tns:ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1"/>  
+  <xsd:complexType name="ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1">  
+    <xsd:sequence>  
+      <xsd:element minOccurs="0" name="request_type">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="2"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="order_no">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:integer">  
+            <xsd:minInclusive value="-2147483648"/>  
+            <xsd:maxInclusive value="2147483647"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="busarea">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="modelid">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="order_type">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="chassis_no">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="vin">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="order_qty">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:integer">  
+            <xsd:minInclusive value="-2147483648"/>  
+            <xsd:maxInclusive value="2147483647"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="order_cost">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:decimal">  
+            <xsd:minInclusive value="-999999999.99"/>  
+            <xsd:maxInclusive value="999999999.99"/>  
+            <xsd:fractionDigits value="2"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="req_delivery_date">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="delivery_location">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="act_delivery_date">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="status">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="15"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="requested_by">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="start_aft_order_no">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:integer">  
+            <xsd:minInclusive value="-2147483648"/>  
+            <xsd:maxInclusive value="2147483647"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+    </xsd:sequence>  
+  </xsd:complexType>  
+</xsd:schema>]]></inlinedXMLSchema>
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST" xmlns:body="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST">                                           
+                                           
+      <xsd:import namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST" schemaLocation="../schema_0.xsd"/>                                           
+                                           
+      <xsd:element name="HTTPRequest" type="tns:HTTPRequestType"/>                                           
+                                           
+      <xsd:complexType name="HTTPRequestType">                                           
+        <xsd:sequence>                                           
+          <xsd:element name="Headers" type="tns:HeadersType"/>                                           
+          <xsd:element name="PathParameters" type="tns:PathParametersType"/>                                           
+          <xsd:element name="QueryParameters" type="tns:QueryParametersType"/>                                           
+          <xsd:element name="Body" type="tns:BodyType"/>                                           
+        </xsd:sequence>                                           
+      </xsd:complexType>                                           
+                                           
+      <xsd:complexType name="HeadersType">                                           
+        <xsd:sequence>                                           
+        	<xsd:element maxOccurs="1" minOccurs="0" name="Authorization" type="xsd:string"/>                                           
+        </xsd:sequence>                                           
+      </xsd:complexType>                                           
+                                           
+      <xsd:complexType name="PathParametersType">                                           
+        <xsd:sequence>                                           
+        </xsd:sequence>                                           
+      </xsd:complexType>                                           
+                                           
+      <xsd:complexType name="QueryParametersType">                                           
+        <xsd:sequence>                                           
+        </xsd:sequence>                                           
+      </xsd:complexType>                                           
+                                           
+      <xsd:complexType name="BodyType">                                           
+        <xsd:sequence>                                           
+          <xsd:element ref="body:ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1"/>                                           
+        </xsd:sequence>                                           
+      </xsd:complexType>                                           
+    </xsd:schema>]]></inlinedXMLSchema>
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST" var="rootInput"/>
+    <output inlinedXMLSchema="true" path="../schema_0.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST" var="rootOutput"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST"/>
+    </namespaces>
+    <mappingDeclaration name="POST.orders">
+        <input namespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/POST" path="$rootInput/HTTPRequest"/>
+        <output namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/POST" path="$rootOutput/ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1"/>
+        <passthrough>
+            <input path="Body/ref%2Ddb2%2Dvehicleorder%2Dsearch%2Dv1"/>
+            <output path="."/>
+            <updates>
+                <assign value="SI">
+                    <output httpIn="body" omitFromInterface="true" path="request_type" shape="1" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:string"/>
+                </assign>
+                <assign value="0">
+                    <output httpIn="body" omitFromInterface="true" path="order_no" shape="1" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:integer"/>
+                </assign>
+                <assign>
+                    <output httpIn="body" omitFromInterface="true" path="act_delivery_date" shape="1" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:string"/>
+                </assign>
+                <assign>
+                    <output httpIn="body" omitFromInterface="true" path="status" shape="1" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:string"/>
+                </assign>
+                <assign value="0">
+                    <output httpIn="body" omitFromInterface="true" path="start_aft_order_no" shape="1" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:integer"/>
+                </assign>
+            </updates>
+        </passthrough>
+    </mappingDeclaration>
+</mappingRoot>

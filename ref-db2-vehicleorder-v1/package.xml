@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="ref-db2-vehicleorder-v1">
+    <apiSpec title="ref-db2-vehicleorder-v1" basePath="/ref-db2-vehicleorder/v1" description="API for Vehicle Order" version="1">
+        <path relativePath="/orders">
+            <method type="GET" zosConnectServiceRef="ref-db2-vehicleorder-search-v1" httpXformFile="api/orders/GET/mapping.xml" operationId="getRef-db2-vehicleorder-search-v1"/>
+            <method type="POST" zosConnectServiceRef="ref-db2-vehicleorder-search-v1" httpXformFile="api/orders/POST/mapping.xml" operationId="postRef-db2-vehicleorder-search-v1"/>
+        </path>
+        <path relativePath="/oldorder/order-no/{order-no}">
+            <method type="PUT" zosConnectServiceRef="ref-db2-vehicleorder-search-v1" httpXformFile="api/oldorder/order-no/{order-no}/PUT/mapping.xml" operationId="putRef-db2-vehicleorder-search-v1"/>
+        </path>
+        <path relativePath="/oldorder/business-area/{busarea}/model-id/{modelid}/order-type/{order-type}/chassis/{chassis}/vin/{vin}">
+            <method type="PUT" zosConnectServiceRef="ref-db2-vehicleorder-search-v1" httpXformFile="api/oldorder/business-area/{busarea}/model-id/{modelid}/order-type/{order-type}/chassis/{chassis}/vin/{vin}/PUT/mapping.xml" operationId="putRef-db2-vehicleorder-search-v11"/>
+        </path>
+        <path relativePath="/archiveorder/order-no/{order-no}">
+            <method type="DELETE" zosConnectServiceRef="ref-db2-vehicleorder-search-v1" httpXformFile="api/archiveorder/order-no/{order-no}/DELETE/mapping.xml" operationId="deleteRef-db2-vehicleorder-search-v1"/>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

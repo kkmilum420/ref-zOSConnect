@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZosConnectServiceMapping xmlns:ns2="http://www.ibm.com/zosConnect/2.0/zosConnectServiceMapping" mappingSpecVersion="1.0">
+    <mappingContext basePath="/ref-db2-vehicleorder/v1" relativePath="/archiveorder/order-no/{order-no}" method="DELETE" serviceName="ref-db2-vehicleorder-search-v1" defaultResponseCode="200"/>
+    <requestMessage>
+        <mappingRootModel type="MSL" location="api/archiveorder/order-no/{order-no}/DELETE/request.map"/>
+    </requestMessage>
+    <responseMessages code="200" description="OK"/>
+</ns2:ZosConnectServiceMapping>

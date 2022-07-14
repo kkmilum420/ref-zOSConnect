@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Output Parameters": {
+      "type": "object",
+      "properties": {
+        "new_order_no": {
+          "type": "integer",
+          "multipleOf": 1,
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "description": "Nullable INTEGER"
+        },
+        "response_code": {
+          "type": "string",
+          "maxLength": 4,
+          "description": "Nullable CHAR(4)"
+        },
+        "response_reason": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Nullable CHAR(100)"
+        },
+        "debugtxt": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Nullable VARCHAR(1000)"
+        }
+      },
+      "required": [
+        "new_order_no",
+        "response_code",
+        "response_reason",
+        "debugtxt"
+      ],
+      "description": "Output Parameters"
+    },
+    "ResultSet 1 Output": {
+      "description": "Stored Procedure ResultSet 1 Data",
+      "type": "array",
+      "items": {
+        "description": "ResultSet Row",
+        "type": "object"
+      }
+    },
+    "Anonymous ResultSets": {
+      "type": "integer",
+      "multipleOf": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Number of Anonymous ResultSets"
+    },
+    "StatusDescription": {
+      "type": "string",
+      "description": "Service invocation status description"
+    },
+    "StatusCode": {
+      "type": "integer",
+      "multipleOf": 1,
+      "minimum": 100,
+      "maximum": 600,
+      "description": "Service invocation HTTP status code"
+    }
+  },
+  "required": [
+    "StatusDescription",
+    "StatusCode",
+    "Output Parameters"
+  ],
+  "description": "Service ref_vehicleOrder invocation HTTP response body"
+}

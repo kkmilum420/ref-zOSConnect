@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZosConnectServiceMapping xmlns:ns2="http://www.ibm.com/zosConnect/2.0/zosConnectServiceMapping" mappingSpecVersion="1.0">
+    <mappingContext basePath="/ref-db2-vehicleorder/v1" relativePath="/oldorder/business-area/{busarea}/model-id/{modelid}/order-type/{order-type}/chassis/{chassis}/vin/{vin}" method="PUT" serviceName="ref-db2-vehicleorder-search-v1" defaultResponseCode="200"/>
+    <requestMessage>
+        <mappingRootModel type="MSL" location="api/oldorder/business-area/{busarea}/model-id/{modelid}/order-type/{order-type}/chassis/{chassis}/vin/{vin}/PUT/request.map"/>
+    </requestMessage>
+    <responseMessages code="200" description="OK">
+        <mappingRootModel type="MSL" location="api/oldorder/business-area/{busarea}/model-id/{modelid}/order-type/{order-type}/chassis/{chassis}/vin/{vin}/PUT/response.map"/>
+    </responseMessages>
+</ns2:ZosConnectServiceMapping>
