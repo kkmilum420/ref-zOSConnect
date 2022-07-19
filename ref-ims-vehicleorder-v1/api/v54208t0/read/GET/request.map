@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="zosconnect" jsonWrapped="false" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/GET" version="8.0.5.0" xmlns:map="http://www.ibm.com/zosConnect/2.0/mapping/GET">
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"> 
+  <xsd:element name="ORDER_REQUEST" type="tns:ORDER_REQUEST"/> 
+  <xsd:complexType name="ORDER_REQUEST"> 
+    <xsd:sequence> 
+      <xsd:element minOccurs="0" name="REQUEST_TYPE"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="2"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="REQUEST_READ" type="tns:REQUEST_READ"/> 
+    </xsd:sequence> 
+  </xsd:complexType> 
+  <xsd:complexType name="REQUEST_READ"> 
+    <xsd:sequence> 
+      <xsd:element minOccurs="0" name="READ_ORDER_TYPE"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="20"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_ORDER_NO"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="9"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_BUSAREA"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="10"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_MODEL_ID"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="20"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_CHASSIS_NO"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="10"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_VIN"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="20"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_REQ_DELIVERY_DATE"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="10"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_DELIVERY_LOCATION"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="20"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_STATUS"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="15"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_ACT_DELIVERY_DATE"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="10"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element minOccurs="0" name="READ_REQUESTED_BY"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:string"> 
+            <xsd:maxLength value="20"/> 
+          </xsd:restriction> 
+        </xsd:simpleType> 
+      </xsd:element> 
+    </xsd:sequence> 
+  </xsd:complexType> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" xmlns:body="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"> 
+ 
+      <xsd:import namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" schemaLocation="../schema_0.xsd"/> 
+ 
+      <xsd:element name="HTTPRequest" type="tns:HTTPRequestType"/> 
+ 
+      <xsd:complexType name="HTTPRequestType"> 
+        <xsd:sequence> 
+          <xsd:element name="Headers" type="tns:HeadersType"/> 
+          <xsd:element name="PathParameters" type="tns:PathParametersType"/> 
+          <xsd:element name="QueryParameters" type="tns:QueryParametersType"/> 
+          <xsd:element name="Body" type="tns:BodyType"/> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+ 
+      <xsd:complexType name="HeadersType"> 
+        <xsd:sequence> 
+        	<xsd:element maxOccurs="1" minOccurs="0" name="Authorization" type="xsd:string"/> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+ 
+      <xsd:complexType name="PathParametersType"> 
+        <xsd:sequence> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+ 
+      <xsd:complexType name="QueryParametersType"> 
+        <xsd:sequence> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+ 
+      <xsd:complexType name="BodyType"> 
+        <xsd:sequence> 
+          <xsd:element ref="body:ORDER_REQUEST"/> 
+        </xsd:sequence> 
+      </xsd:complexType> 
+    </xsd:schema>]]></inlinedXMLSchema>
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" var="rootInput"/>
+    <output inlinedXMLSchema="true" path="../schema_0.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" var="rootOutput"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"/>
+    </namespaces>
+    <mappingDeclaration name="GET.v54208t0.read">
+        <input namespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" path="$rootInput/HTTPRequest"/>
+        <output namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" path="$rootOutput/ORDER_REQUEST"/>
+        <passthrough>
+            <input path="Body/ORDER_REQUEST"/>
+            <output path="."/>
+            <updates>
+                <assign value="RD">
+                    <output httpIn="body" omitFromInterface="true" path="REQUEST_TYPE" shape="1,2" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:string"/>
+                </assign>
+            </updates>
+        </passthrough>
+    </mappingDeclaration>
+</mappingRoot>

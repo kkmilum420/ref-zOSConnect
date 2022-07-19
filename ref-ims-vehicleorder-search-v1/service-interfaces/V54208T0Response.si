@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="V54208T0Response" direction="0" serviceType="IMS">
+    <message id="1" name="V54208T0Response">
+        <segment id="1" name="Segment 1" originalName="Segment 1">
+            <field name="order-response" originalName="ORDER_RESPONSE" included="Y" path="order-response">
+                <startPos>1</startPos>
+                <bytes>14456</bytes>
+                <maxBytes>14456</maxBytes>
+                <remarks></remarks>
+                <marshaller alignment="NATURAL"/>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="ll" originalName="RESPONSE_LL" included="N" defaultValue="" isHex="false" path="order-response.ll" codepageConversion="Y">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <remarks></remarks>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="zz" originalName="RESPONSE_ZZ" included="N" defaultValue="" isHex="false" path="order-response.zz" codepageConversion="Y">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <remarks></remarks>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="response-search" originalName="RESPONSE_READ" included="Y" path="order-response.response-search">
+                    <startPos>5</startPos>
+                    <bytes>12974</bytes>
+                    <maxBytes>12974</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="search-return-code" originalName="RESREAD_RETURN_CODE" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-return-code" codepageConversion="Y">
+                        <startPos>5</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="search-reason-code" originalName="RESREAD_REASON_CODE" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-reason-code" codepageConversion="Y">
+                        <startPos>9</startPos>
+                        <bytes>70</bytes>
+                        <maxBytes>70</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-data" originalName="RESPONSE_READ_DATA" included="Y" path="order-response.response-search.search-data" minOccurs="50" maxOccurs="50">
+                        <startPos>79</startPos>
+                        <bytes>12900</bytes>
+                        <maxBytes>12900</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="search-order" originalName="RESREAD_ORDER_NO" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order" codepageConversion="Y">
+                            <bytes>9</bytes>
+                            <maxBytes>9</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                        </field>
+                        <field name="search-business-area" originalName="RESREAD_BUSAREA" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-business-area" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-model-id" originalName="RESREAD_MODEL_ID" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-model-id" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-order-type" originalName="RESREAD_ORDER_TYPE" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-type" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-chassis" originalName="RESREAD_CHASSIS_NO" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-chassis" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-vin" originalName="RESREAD_VIN" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-vin" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-requested-delivery-date" originalName="RESREAD_REQ_DELIVERY_DATE" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-requested-delivery-date" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-requested-delivery-location" originalName="RESREAD_DELIVERY_LOCATION" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-requested-delivery-location" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-order-quantity" originalName="RESREAD_ORDER_QTY" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-quantity" codepageConversion="Y">
+                            <bytes>9</bytes>
+                            <maxBytes>9</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                        </field>
+                        <field name="search-order-total-cost" originalName="RESREAD_ORDER_TOTAL_COST" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-total-cost" codepageConversion="Y">
+                            <bytes>13</bytes>
+                            <maxBytes>13</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-order-status" originalName="RESREAD_STATUS" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-status" codepageConversion="Y">
+                            <bytes>15</bytes>
+                            <maxBytes>15</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-actual-delivery-date" originalName="RESREAD_ACT_DELIVERY_DATE" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-actual-delivery-date" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-requested-by" originalName="RESREAD_REQUESTED_BY" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-requested-by" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-update-By" originalName="RESREAD_UPDATED_BY" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-update-By" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-order-creation-timestamp" originalName="RESREAD_CREATION_TIMESTAMP" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-creation-timestamp" codepageConversion="Y">
+                            <bytes>26</bytes>
+                            <maxBytes>26</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="search-order-update-timestamp" originalName="RESREAD_UPDATE_TIMESTAMP" included="Y" defaultValue="" isHex="false" path="order-response.response-search.search-data.search-order-update-timestamp" codepageConversion="Y">
+                            <bytes>26</bytes>
+                            <maxBytes>26</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                    </field>
+                </field>
+                <field name="response-add" originalName="RESPONSE_INSERT" included="N" path="order-response.response-add">
+                    <startPos>12979</startPos>
+                    <bytes>1330</bytes>
+                    <maxBytes>1330</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="response-add-data" originalName="RESPONSE_INSERT_DATA" included="N" path="order-response.response-add.response-add-data" minOccurs="10" maxOccurs="10">
+                        <startPos>12979</startPos>
+                        <bytes>1330</bytes>
+                        <maxBytes>1330</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="add-return-code" originalName="RESINS_RETURN_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.add-return-code" codepageConversion="Y">
+                            <bytes>4</bytes>
+                            <maxBytes>4</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                        </field>
+                        <field name="add-reason-code" originalName="RESINS_REASON_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.add-reason-code" codepageConversion="Y">
+                            <bytes>70</bytes>
+                            <maxBytes>70</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="new-order" originalName="RESINS_ORDER_NO" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.new-order" codepageConversion="Y">
+                            <bytes>9</bytes>
+                            <maxBytes>9</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                        </field>
+                        <field name="add-business-area" originalName="RESINS_BUSAREA" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.add-business-area" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-model-id" originalName="RESINS_MODEL_ID" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.add-model-id" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-order-type" originalName="RESINS_ORDER_TYPE" included="N" defaultValue="" isHex="false" path="order-response.response-add.response-add-data.add-order-type" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                    </field>
+                </field>
+                <field name="response-change" originalName="RESPONSE_UPDATE" included="N" path="order-response.response-change">
+                    <startPos>14309</startPos>
+                    <bytes>74</bytes>
+                    <maxBytes>74</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="change-return-code" originalName="RESUPD_RETUEN_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-change.change-return-code" codepageConversion="Y">
+                        <startPos>14309</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="change-reason-code" originalName="RESUPD_REASON_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-change.change-reason-code" codepageConversion="Y">
+                        <startPos>14313</startPos>
+                        <bytes>70</bytes>
+                        <maxBytes>70</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="response-cancel" originalName="RESPONSE_DELETE" included="N" path="order-response.response-cancel">
+                    <startPos>14383</startPos>
+                    <bytes>74</bytes>
+                    <maxBytes>74</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="cancel-return-code" originalName="RESDEL_RETUEN_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-cancel.cancel-return-code" codepageConversion="Y">
+                        <startPos>14383</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
+                    </field>
+                    <field name="cancel-reason-code" originalName="RESDEL_REASON_CODE" included="N" defaultValue="" isHex="false" path="order-response.response-cancel.cancel-reason-code" codepageConversion="Y">
+                        <startPos>14387</startPos>
+                        <bytes>70</bytes>
+                        <maxBytes>70</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

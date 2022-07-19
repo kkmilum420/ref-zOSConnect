@@ -1,0 +1,51 @@
+{
+  "type" : "object",
+  "properties" : {
+    "order-response" : {
+      "type" : "object",
+      "properties" : {
+        "response-add" : {
+          "type" : "object",
+          "properties" : {
+            "add-data" : {
+              "type" : "array",
+              "maxItems" : 10,
+              "minItems" : 10,
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "add-return-code" : {
+                    "minimum" : 0,
+                    "maximum" : 9999,
+                    "type" : "integer"
+                  },
+                  "add-reason-code" : {
+                    "maxLength" : 70,
+                    "type" : "string"
+                  },
+                  "new-order" : {
+                    "minimum" : 0,
+                    "maximum" : 999999999,
+                    "type" : "integer"
+                  },
+                  "add-business-area" : {
+                    "maxLength" : 10,
+                    "type" : "string"
+                  },
+                  "add-model-id" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "add-order-type" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

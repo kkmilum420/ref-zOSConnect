@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="ref-ims-vehicleorder-v1">
+    <apiSpec title="ref-ims-vehicleorder-v1" basePath="/ref-ims-vehicleorder/v1" description="Api for integration between IMS Transaction V54208T0 and z/OS Connect" version="1">
+        <path relativePath="/orders">
+            <method type="GET" zosConnectServiceRef="ref-ims-vehicleorder-search-v1" httpXformFile="api/orders/GET/mapping.xml" operationId="getRef-ims-vehicleorder-search-v11"/>
+        </path>
+        <path relativePath="/neworder">
+            <method type="POST" zosConnectServiceRef="ref-ims-vehicleorder-add-v1" httpXformFile="api/neworder/POST/mapping.xml" operationId="postRef-ims-vehicleorder-add-v1"/>
+        </path>
+        <path relativePath="/neworders">
+            <method type="POST" zosConnectServiceRef="ref-ims-vehicleorder-add-v1" httpXformFile="api/neworders/POST/mapping.xml" operationId="postRef-ims-vehicleorder-add-v11"/>
+        </path>
+        <path relativePath="/oldorder/order-no/{order-no}">
+            <method type="PUT" zosConnectServiceRef="ref-ims-vehicleorder-change-v1" httpXformFile="api/oldorder/order-no/{order-no}/PUT/mapping.xml" operationId="putRef-ims-vehicleorder-change-v1"/>
+        </path>
+        <path relativePath="/oldorder/business-area/{business-area}/model-id/{model-id}/order-type/{order-type}/chassis-no/{chassis-no}/vin/{vin}">
+            <method type="PUT" zosConnectServiceRef="ref-ims-vehicleorder-change-v1" httpXformFile="api/oldorder/business-area/{business-area}/model-id/{model-id}/order-type/{order-type}/chassis-no/{chassis-no}/vin/{vin}/PUT/mapping.xml" operationId="putRef-ims-vehicleorder-change-v11"/>
+        </path>
+        <path relativePath="/archiveorder/order-no/{order-no}">
+            <method type="DELETE" zosConnectServiceRef="ref-ims-vehicleorder-cancel-v1" httpXformFile="api/archiveorder/order-no/{order-no}/DELETE/mapping.xml" operationId="deleteRef-ims-vehicleorder-cancel-v1"/>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

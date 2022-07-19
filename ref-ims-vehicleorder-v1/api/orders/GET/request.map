@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="zosconnect" jsonWrapped="false" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/GET" version="8.0.5.0" xmlns:map="http://www.ibm.com/zosConnect/2.0/mapping/GET">
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET">  
+  <xsd:element name="order-request" type="tns:order-request"/>  
+  <xsd:complexType name="order-request">  
+    <xsd:sequence>  
+      <xsd:element minOccurs="0" name="request-type">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="2"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="request-search" type="tns:request-search"/>  
+    </xsd:sequence>  
+  </xsd:complexType>  
+  <xsd:complexType name="request-search">  
+    <xsd:sequence>  
+      <xsd:element minOccurs="0" name="seacrh-order-type">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-order">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="9"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-business-area">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-model-id">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-chassis">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-vin">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-requested-delivery-date">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-delivery-location">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-status">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="15"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-actual-delivery-date">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="10"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-requested-by">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="20"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+      <xsd:element minOccurs="0" name="search-last-order">  
+        <xsd:simpleType>  
+          <xsd:restriction base="xsd:string">  
+            <xsd:maxLength value="9"/>  
+          </xsd:restriction>  
+        </xsd:simpleType>  
+      </xsd:element>  
+    </xsd:sequence>  
+  </xsd:complexType>  
+</xsd:schema>]]></inlinedXMLSchema>
+    <inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" xmlns:body="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET">              
+              
+      <xsd:import namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" schemaLocation="../schema_0.xsd"/>              
+              
+      <xsd:element name="HTTPRequest" type="tns:HTTPRequestType"/>              
+              
+      <xsd:complexType name="HTTPRequestType">              
+        <xsd:sequence>              
+          <xsd:element name="Headers" type="tns:HeadersType"/>              
+          <xsd:element name="PathParameters" type="tns:PathParametersType"/>              
+          <xsd:element name="QueryParameters" type="tns:QueryParametersType"/>              
+          <xsd:element name="Body" type="tns:BodyType"/>              
+        </xsd:sequence>              
+      </xsd:complexType>              
+              
+      <xsd:complexType name="HeadersType">              
+        <xsd:sequence>              
+        	<xsd:element maxOccurs="1" minOccurs="0" name="Authorization" type="xsd:string"/>              
+        </xsd:sequence>              
+      </xsd:complexType>              
+              
+      <xsd:complexType name="PathParametersType">              
+        <xsd:sequence>              
+                          
+                   
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+    </xsd:sequence>              
+      </xsd:complexType>              
+              
+      <xsd:complexType name="QueryParametersType">              
+        <xsd:sequence>              
+        </xsd:sequence>              
+      </xsd:complexType>              
+              
+      <xsd:complexType name="BodyType">              
+        <xsd:sequence>              
+          <xsd:element ref="body:order-request"/>              
+        </xsd:sequence>              
+      </xsd:complexType>              
+    </xsd:schema>]]></inlinedXMLSchema>
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" var="rootInput"/>
+    <output inlinedXMLSchema="true" path="../schema_0.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" var="rootOutput"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"/>
+    </namespaces>
+    <mappingDeclaration name="GET.orders">
+        <input namespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" path="$rootInput/HTTPRequest"/>
+        <output namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" path="$rootOutput/order-request"/>
+        <passthrough>
+            <input path="Body/order-request"/>
+            <output path="."/>
+            <updates>
+                <assign value="RD">
+                    <output httpIn="body" omitFromInterface="true" path="request-type" shape="1,2" xsdBuiltInOrDerivedSimpleType="http://www.w3.org/2001/XMLSchema:string"/>
+                </assign>
+            </updates>
+        </passthrough>
+    </mappingDeclaration>
+</mappingRoot>

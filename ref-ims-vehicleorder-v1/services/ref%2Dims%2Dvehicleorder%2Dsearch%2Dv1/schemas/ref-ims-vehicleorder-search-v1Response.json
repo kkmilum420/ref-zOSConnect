@@ -1,0 +1,100 @@
+{
+  "type" : "object",
+  "properties" : {
+    "order-response" : {
+      "type" : "object",
+      "properties" : {
+        "response-search" : {
+          "type" : "object",
+          "properties" : {
+            "search-return-code" : {
+              "minimum" : 0,
+              "maximum" : 9999,
+              "type" : "integer"
+            },
+            "search-reason-code" : {
+              "maxLength" : 70,
+              "type" : "string"
+            },
+            "search-data" : {
+              "type" : "array",
+              "maxItems" : 50,
+              "minItems" : 50,
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "search-order" : {
+                    "minimum" : 0,
+                    "maximum" : 999999999,
+                    "type" : "integer"
+                  },
+                  "search-business-area" : {
+                    "maxLength" : 10,
+                    "type" : "string"
+                  },
+                  "search-model-id" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-order-type" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-chassis" : {
+                    "maxLength" : 10,
+                    "type" : "string"
+                  },
+                  "search-vin" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-requested-delivery-date" : {
+                    "maxLength" : 10,
+                    "type" : "string"
+                  },
+                  "search-requested-delivery-location" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-order-quantity" : {
+                    "minimum" : -999999999,
+                    "maximum" : 999999999,
+                    "type" : "integer"
+                  },
+                  "search-order-total-cost" : {
+                    "maxLength" : 13,
+                    "type" : "string"
+                  },
+                  "search-order-status" : {
+                    "maxLength" : 15,
+                    "type" : "string"
+                  },
+                  "search-actual-delivery-date" : {
+                    "maxLength" : 10,
+                    "type" : "string"
+                  },
+                  "search-requested-by" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-update-By" : {
+                    "maxLength" : 20,
+                    "type" : "string"
+                  },
+                  "search-order-creation-timestamp" : {
+                    "maxLength" : 26,
+                    "type" : "string"
+                  },
+                  "search-order-update-timestamp" : {
+                    "maxLength" : 26,
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="V54208T0Request" direction="0" serviceType="IMS">
+    <message id="1" name="V54208T0Request">
+        <segment id="1" name="Segment 1" originalName="Segment 1">
+            <field name="order-request" originalName="ORDER_REQUEST" included="Y" path="order-request">
+                <startPos>1</startPos>
+                <bytes>1415</bytes>
+                <maxBytes>1415</maxBytes>
+                <remarks></remarks>
+                <marshaller alignment="NATURAL"/>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="ll" originalName="REQUEST_LL" included="N" defaultValue="" isHex="false" path="order-request.ll" codepageConversion="Y">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <remarks></remarks>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="zz" originalName="REQUEST_ZZ" included="N" defaultValue="" isHex="false" path="order-request.zz" codepageConversion="Y">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <remarks></remarks>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="trancode" originalName="REQUEST_TRANCODE" included="N" defaultValue="" isHex="false" path="order-request.trancode" codepageConversion="Y">
+                    <startPos>5</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="fill_0" originalName="FILL_0" included="N" defaultValue="" isHex="false" path="order-request.fill_0" codepageConversion="Y">
+                    <startPos>13</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="request-type" originalName="REQUEST_TYPE" included="Y" defaultValue="" isHex="false" path="order-request.request-type" codepageConversion="Y">
+                    <startPos>14</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="request-search" originalName="REQUEST_READ" included="Y" path="order-request.request-search">
+                    <startPos>16</startPos>
+                    <bytes>173</bytes>
+                    <maxBytes>173</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="seacrh-order-type" originalName="READ_ORDER_TYPE" included="Y" defaultValue="" isHex="false" path="order-request.request-search.seacrh-order-type" codepageConversion="Y">
+                        <startPos>16</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-order" originalName="READ_ORDER_NO" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-order" codepageConversion="Y">
+                        <startPos>36</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-business-area" originalName="READ_BUSAREA" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-business-area" codepageConversion="Y">
+                        <startPos>45</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-model-id" originalName="READ_MODEL_ID" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-model-id" codepageConversion="Y">
+                        <startPos>55</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-chassis" originalName="READ_CHASSIS_NO" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-chassis" codepageConversion="Y">
+                        <startPos>75</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-vin" originalName="READ_VIN" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-vin" codepageConversion="Y">
+                        <startPos>85</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-requested-delivery-date" originalName="READ_REQ_DELIVERY_DATE" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-requested-delivery-date" codepageConversion="Y">
+                        <startPos>105</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-delivery-location" originalName="READ_DELIVERY_LOCATION" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-delivery-location" codepageConversion="Y">
+                        <startPos>115</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-status" originalName="READ_STATUS" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-status" codepageConversion="Y">
+                        <startPos>135</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-actual-delivery-date" originalName="READ_ACT_DELIVERY_DATE" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-actual-delivery-date" codepageConversion="Y">
+                        <startPos>150</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-requested-by" originalName="READ_REQUESTED_BY" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-requested-by" codepageConversion="Y">
+                        <startPos>160</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="search-last-order" originalName="READ_LAST_ORDER_NO" included="Y" defaultValue="" isHex="false" path="order-request.request-search.search-last-order" codepageConversion="Y">
+                        <startPos>180</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="request-add" originalName="REQUEST_INSERT" included="N" path="order-request.request-add" redefines="REQUEST_READ">
+                    <startPos>16</startPos>
+                    <bytes>1400</bytes>
+                    <maxBytes>1400</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="request-add-data" originalName="REQUEST_INSERT_DATA" included="N" path="order-request.request-add.request-add-data" minOccurs="10" maxOccurs="10">
+                        <startPos>16</startPos>
+                        <bytes>1400</bytes>
+                        <maxBytes>1400</maxBytes>
+                        <remarks></remarks>
+                        <marshaller alignment="NATURAL"/>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="add-business-area" originalName="RINS_BUSAREA" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-business-area" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-model-id" originalName="RINS_MODEL_ID" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-model-id" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-order-type" originalName="RINS_ORDER_TYPE" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-order-type" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-chassis" originalName="RINS_CHASSIS_NO" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-chassis" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-vin" originalName="RINS_VIN" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-vin" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-requested-delivery-date" originalName="RINS_REQ_DELIVERY_DATE" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-requested-delivery-date" codepageConversion="Y">
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-delivery-location" originalName="RINS_DELIVERY_LOCATION" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-delivery-location" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="add-order-quantity" originalName="RINS_ORDER_QTY" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-order-quantity" codepageConversion="Y">
+                            <bytes>4</bytes>
+                            <maxBytes>4</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                            <applicationDatatype datatype="INT" precision="9"/>
+                        </field>
+                        <field name="add-order-cost" originalName="RINS_ORDER_COST" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-order-cost" codepageConversion="Y">
+                            <bytes>6</bytes>
+                            <maxBytes>6</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="Y">
+<typeConverter>PACKEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="11" scale="2"/>
+                        </field>
+                        <field name="add-requested-by" originalName="RINS_REQUESTED_BY" included="N" defaultValue="" isHex="false" path="order-request.request-add.request-add-data.add-requested-by" codepageConversion="Y">
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                    </field>
+                </field>
+                <field name="request-change" originalName="REQUEST_UPDATE" included="N" path="order-request.request-change" redefines="REQUEST_READ">
+                    <startPos>16</startPos>
+                    <bytes>124</bytes>
+                    <maxBytes>124</maxBytes>
+                    <remarks></remarks>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="change-order" originalName="RUPD_ORDER_NO" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-order" codepageConversion="Y">
+                        <startPos>16</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                    </field>
+                    <field name="change-business-area" originalName="RUPD_BUSAREA" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-business-area" codepageConversion="Y">
+                        <startPos>25</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-model-id" originalName="RUPD_MODEL_ID" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-model-id" codepageConversion="Y">
+                        <startPos>35</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-order-type" originalName="RUPD_ORDER_TYPE" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-order-type" codepageConversion="Y">
+                        <startPos>55</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-chassis" originalName="RUPD_CHASSIS_NO" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-chassis" codepageConversion="Y">
+                        <startPos>75</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-vin" originalName="RUPD_VIN" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-vin" codepageConversion="Y">
+                        <startPos>85</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-order-quantity" originalName="RUPD_ORDER_QTY" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-order-quantity" codepageConversion="Y">
+                        <startPos>105</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="9"/>
+                    </field>
+                    <field name="change-order-cost" originalName="RUPD_ORDER_COST" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-order-cost" codepageConversion="Y">
+                        <startPos>109</startPos>
+                        <bytes>6</bytes>
+                        <maxBytes>6</maxBytes>
+                        <remarks></remarks>
+                        <marshaller isSigned="Y">
+                            <typeConverter>PACKEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="11" scale="2"/>
+                    </field>
+                    <field name="change-actual-delivery-date" originalName="RUPD_ACT_DELIVERY_DATE" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-actual-delivery-date" codepageConversion="Y">
+                        <startPos>115</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="change-status" originalName="RUPD_STATUS" included="N" defaultValue="" isHex="false" path="order-request.request-change.change-status" codepageConversion="Y">
+                        <startPos>125</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="request-cancel" originalName="REQUEST_DELETE" included="N" path="order-request.request-cancel" redefines="REQUEST_READ">
+                    <startPos>16</startPos>
+                    <bytes>89</bytes>
+                    <maxBytes>89</maxBytes>
+                    <remarks></remarks>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="request-cancel-data" originalName="REQUEST_DELETE_DATA" included="N" path="order-request.request-cancel.request-cancel-data">
+                        <startPos>16</startPos>
+                        <bytes>89</bytes>
+                        <maxBytes>89</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="STRUCT"/>
+                        <field name="cancel-order" originalName="RDEL_ORDER_NO" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-order" codepageConversion="Y">
+                            <startPos>16</startPos>
+                            <bytes>9</bytes>
+                            <maxBytes>9</maxBytes>
+                            <remarks></remarks>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                        </field>
+                        <field name="cancel-business-area" originalName="RDEL_BUSAREA" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-business-area" codepageConversion="Y">
+                            <startPos>25</startPos>
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="cancel-model-id" originalName="RDEL_MODEL_ID" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-model-id" codepageConversion="Y">
+                            <startPos>35</startPos>
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="cancel-order-type" originalName="RDEL_ORDER_TYPE" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-order-type" codepageConversion="Y">
+                            <startPos>55</startPos>
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="cancel-chassis" originalName="RDEL_CHASSIS_NO" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-chassis" codepageConversion="Y">
+                            <startPos>75</startPos>
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="cancel-vin" originalName="RDEL_VIN" included="N" defaultValue="" isHex="false" path="order-request.request-cancel.request-cancel-data.cancel-vin" codepageConversion="Y">
+                            <startPos>85</startPos>
+                            <bytes>20</bytes>
+                            <maxBytes>20</maxBytes>
+                            <remarks></remarks>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

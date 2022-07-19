@@ -1,0 +1,49 @@
+{
+  "type" : "object",
+  "properties" : {
+    "order-request" : {
+      "type" : "object",
+      "properties" : {
+        "request-type" : {
+          "maxLength" : 2,
+          "type" : "string"
+        },
+        "request-cancel" : {
+          "type" : "object",
+          "properties" : {
+            "request-cancel-data" : {
+              "type" : "object",
+              "properties" : {
+                "cancel-order" : {
+                  "minimum" : 0,
+                  "maximum" : 999999999,
+                  "type" : "integer"
+                },
+                "cancel-business-area" : {
+                  "maxLength" : 10,
+                  "type" : "string"
+                },
+                "cancel-model-id" : {
+                  "maxLength" : 20,
+                  "type" : "string"
+                },
+                "cancel-order-type" : {
+                  "maxLength" : 20,
+                  "type" : "string"
+                },
+                "cancel-chassis" : {
+                  "maxLength" : 10,
+                  "type" : "string"
+                },
+                "cancel-vin" : {
+                  "maxLength" : 20,
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

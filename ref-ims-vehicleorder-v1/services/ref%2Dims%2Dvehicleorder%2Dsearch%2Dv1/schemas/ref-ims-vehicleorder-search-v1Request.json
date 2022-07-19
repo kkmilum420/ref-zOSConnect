@@ -1,0 +1,67 @@
+{
+  "type" : "object",
+  "properties" : {
+    "order-request" : {
+      "type" : "object",
+      "properties" : {
+        "request-type" : {
+          "maxLength" : 2,
+          "type" : "string"
+        },
+        "request-search" : {
+          "type" : "object",
+          "properties" : {
+            "seacrh-order-type" : {
+              "maxLength" : 20,
+              "type" : "string"
+            },
+            "search-order" : {
+              "maxLength" : 9,
+              "type" : "string"
+            },
+            "search-business-area" : {
+              "maxLength" : 10,
+              "type" : "string"
+            },
+            "search-model-id" : {
+              "maxLength" : 20,
+              "type" : "string"
+            },
+            "search-chassis" : {
+              "maxLength" : 10,
+              "type" : "string"
+            },
+            "search-vin" : {
+              "maxLength" : 20,
+              "type" : "string"
+            },
+            "search-requested-delivery-date" : {
+              "maxLength" : 10,
+              "type" : "string"
+            },
+            "search-delivery-location" : {
+              "maxLength" : 20,
+              "type" : "string"
+            },
+            "search-status" : {
+              "maxLength" : 15,
+              "type" : "string"
+            },
+            "search-actual-delivery-date" : {
+              "maxLength" : 10,
+              "type" : "string"
+            },
+            "search-requested-by" : {
+              "maxLength" : 20,
+              "type" : "string"
+            },
+            "search-last-order" : {
+              "maxLength" : 9,
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
